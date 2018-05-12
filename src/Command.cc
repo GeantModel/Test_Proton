@@ -18,6 +18,8 @@ void Command::SetNewValue(G4UIcommand *command, G4String newValue) {
         my_command_gen->setVector(setVector->GetNew3VectorValue(newValue));
     if(command==setName)
         my_command_step->setName(newValue);
+    if(command == setEvent)
+        my_command_event->setEvent(setEvent->GetNewDoubleValue(newValue));
 }
 
 Command::Command(Geometry* geom): my_command_geometry(geom){
@@ -38,7 +40,6 @@ Command::Command(PrimaryGen* gen): my_command_gen(gen) {
 
     setVector = new G4UIcmdWith3Vector("/my_command/setVector",this);
     setVector->SetGuidance("Select vector ");
-
 }
 
 Command::Command(StepAction* step): my_command_step(step) {
@@ -46,6 +47,13 @@ Command::Command(StepAction* step): my_command_step(step) {
 
     setName = new G4UIcmdWithAString("/my_command/setname",this);
     setName->SetGuidance("Select vector ");
+
+}
+Command::Command(EventAction* event): my_command_event(event) {
+    auto dir = new G4UIdirectory("/my_command/");
+
+    setEvent = new G4UIcmdWithADouble("/my_command/setEvent",this);
+    setEvent->SetGuidance("Select vector ");
 
 }
 Command::~Command() {}

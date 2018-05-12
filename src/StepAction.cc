@@ -13,4 +13,5 @@ void StepAction::UserSteppingAction(const G4Step *step) {}
 
 void StepAction::setName(G4String newValue) {
      StepAction::pName = newValue;
+     exit(77);
 }
