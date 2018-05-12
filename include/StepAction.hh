@@ -7,15 +7,18 @@
 
 #include <G4UserSteppingAction.hh>
 #include <G4String.hh>
+#include "Command.hh"
 
 class EventAction;
 class StepAction : public G4UserSteppingAction{
     EventAction* event;
     G4String pName;
+private:
+    Command* detCommand;
 public:
     explicit StepAction(EventAction *event);
 
     void UserSteppingAction(const G4Step *step) override;
-
+    void setName(G4String newValue);
 };
 #endif //TEMPLATE_STEPACTION_HH

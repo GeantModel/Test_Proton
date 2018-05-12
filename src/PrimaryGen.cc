@@ -11,6 +11,7 @@ void PrimaryGen::GeneratePrimaries(G4Event *anEvent) {
 }
 
 PrimaryGen::PrimaryGen() {
+    detCommand = new Command(this);
     pos_vect.set(0,0,-10*cm);
     gun = new G4ParticleGun(1);
     gun->SetParticleDefinition(G4Gamma::GammaDefinition());
@@ -21,4 +22,10 @@ PrimaryGen::PrimaryGen() {
 
 PrimaryGen::~PrimaryGen() {
     delete gun;
+    delete detCommand;
 }
+
+void PrimaryGen::setVector(G4ThreeVector newValue) {
+    PrimaryGen::pos_vect = newValue;
+}
+
