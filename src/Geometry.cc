@@ -19,7 +19,7 @@
 
 
 Geometry::Geometry() {
-    box_size = 10*cm;
+    box_size = 40*mm;
     mName = "G4_BGO";
     nist = G4NistManager::Instance();
     detCommand = new Command(this);

@@ -20,6 +20,8 @@ void Command::SetNewValue(G4UIcommand *command, G4String newValue) {
         my_command_step->setName(newValue);
     if(command == setEvent)
         my_command_event->setEvent(setEvent->GetNewDoubleValue(newValue));
+    if(command == setEnergy)
+        my_command_gen->setEnergy(setEnergy->GetNewDoubleValue(newValue));
 }
 
 Command::Command(Geometry* geom): my_command_geometry(geom){
@@ -40,6 +42,10 @@ Command::Command(PrimaryGen* gen): my_command_gen(gen) {
 
     setVector = new G4UIcmdWith3Vector("/my_command/setVector",this);
     setVector->SetGuidance("Select vector ");
+
+    setEnergy = new G4UIcmdWithADouble("/my_command/setEnergy",this);
+    setEnergy->SetGuidance("Select energy ");
+    setEnergy->SetParameterName("energy", false);
 }
 
 Command::Command(StepAction* step): my_command_step(step) {

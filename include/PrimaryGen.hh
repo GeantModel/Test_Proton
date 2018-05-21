@@ -15,6 +15,8 @@ private:
     G4ParticleGun* gun;
     G4ThreeVector pos_vect;
     Command * detCommand;
+    G4double Energy;
+    G4int number;
 public:
     PrimaryGen();
 
@@ -22,5 +24,6 @@ public:
 
     void GeneratePrimaries(G4Event *anEvent) override;
     void setVector(G4ThreeVector newValue);
+    void setEnergy(G4double newValue);
 };
 #endif //TEMPLATE_PRIMARYGEN_HH

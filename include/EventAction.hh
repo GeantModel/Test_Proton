@@ -12,12 +12,17 @@
 class RunAction;
 
 class EventAction: public G4UserEventAction{
-    RunAction* runAction;
-    G4double Threshold;
+      G4double Threshold;
 private:
     Command* detCommand;
+
+    G4double EnergyDep;
 public:
+    RunAction* runAction;
     explicit EventAction(RunAction *runAction);
     void setEvent(G4double newValue);
+    void BeginOfEventAction(const G4Event* anEvent);
+    void EndOfEventAction(const G4Event* anEvent);
+    void AddEnDep(G4double en);
 };
 #endif //TEMPLATE_EVENTACTION_HH

@@ -25,6 +25,7 @@ class Command: public G4UImessenger{
     G4UIcmdWith3Vector *setVector;
     G4UIcmdWithAString *setName;
     G4UIcmdWithADouble *setEvent;
+    G4UIcmdWithADouble *setEnergy;
     G4UIcommand * cmd;
     Geometry* my_command_geometry;
     PrimaryGen* my_command_gen;
