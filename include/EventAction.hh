@@ -15,8 +15,8 @@ class EventAction: public G4UserEventAction{
       G4double Threshold;
 private:
     Command* detCommand;
-
     G4double EnergyDep;
+    G4int num;
 public:
     RunAction* runAction;
     explicit EventAction(RunAction *runAction);
@@ -24,5 +24,6 @@ public:
     void BeginOfEventAction(const G4Event* anEvent);
     void EndOfEventAction(const G4Event* anEvent);
     void AddEnDep(G4double en);
-};
+    void AddGamma(G4int newvalue);
+    };
 #endif //TEMPLATE_EVENTACTION_HH

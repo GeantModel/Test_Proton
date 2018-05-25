@@ -14,8 +14,10 @@ public: RunAction();
         void BeginOfRunAction(const G4Run* aRun);
         void EndOfRunAction(const G4Run* aRun);
         void AddEvent(G4double energy);
+    void Sum(G4int sum);
 
 private:
+    G4int sumGamma;
     std::map<G4double ,G4int > *result;
 };
 #endif //TEMPLATE_RUNACTION_HH

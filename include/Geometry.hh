@@ -20,6 +20,7 @@ private:
     G4String mName;
     G4NistManager* nist;
     Command* detCommand;
+
 public:
     void setSize(G4double newSize);
     void setMaterial(G4String newBoxMaterial);

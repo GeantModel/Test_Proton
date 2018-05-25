@@ -16,6 +16,7 @@ Loader::Loader(int argc, char** argv) {
     CLHEP::HepRandom::setTheSeed(time(nullptr));
 
     runManager = new G4MTRunManager();
+    runManager->SetNumberOfThreads(1);
     runManager->SetVerboseLevel(0);
     runManager->SetUserInitialization(new Geometry);
     auto ph = new QBBC;
