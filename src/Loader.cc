@@ -10,6 +10,7 @@
 #include <G4VisExecutive.hh>
 #include <G4UIExecutive.hh>
 #include <G4UImanager.hh>
+#include <QGSP_BERT_HP.hh>
 
 Loader::Loader(int argc, char** argv) {
     G4Random::setTheEngine(new CLHEP::RanecuEngine);
@@ -19,7 +20,7 @@ Loader::Loader(int argc, char** argv) {
     runManager->SetNumberOfThreads(1);
     runManager->SetVerboseLevel(0);
     runManager->SetUserInitialization(new Geometry);
-    auto ph = new QBBC;
+    auto ph = new QGSP_BERT_HP;
     ph->SetVerboseLevel(0);
     runManager->SetUserInitialization(ph);
     runManager->SetUserInitialization(new Action);
