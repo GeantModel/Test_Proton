@@ -68,10 +68,12 @@ G4VPhysicalVolume *Geometry::Construct() {
     box_bgo_log->SetVisAttributes(G4Colour::Blue());
     new G4PVPlacement(0,G4ThreeVector(15*cm,0,20*cm),box_bgo_log,"box_bgo_pvp",world_log,false,0);
 
+    auto rot = new G4RotationMatrix();
+    rot->rotateY(45*deg);
     auto box_c = new G4Box("box_c",10*cm/2.,10*cm/2., 10*cm/2.);
     auto box_c_log = new G4LogicalVolume(box_c,G4NistManager::Instance()->FindOrBuildMaterial(mName),"box_c_log");
     box_c_log->SetVisAttributes(G4Colour::Yellow());
-    new G4PVPlacement(new G4RotationMatrix(0,0,0),G4ThreeVector((5+44.6)*cm,0,20*cm),box_c_log,"box_c_pvp",world_log,false,0);
+    new G4PVPlacement(rot,G4ThreeVector((5+44.6)*cm,0,20*cm),box_c_log,"box_c_pvp",world_log,false,0);
 
   /* auto shpere = new G4Sphere("shphere",55*cm/2.,75*cm/2.,0, 360*deg, 0, 360*deg);
     auto shpere_log = new G4LogicalVolume(shpere,G4NistManager::Instance()->FindOrBuildMaterial("G4_BGO"),"shpere_log");
