@@ -17,7 +17,7 @@ public: RunAction();
         void BeginOfRunAction(const G4Run* aRun);
         void EndOfRunAction(const G4Run* aRun);
         void AddEvent(G4double energy);
-        void AddEvent2(G4int energ);
+        void AddEvent2(G4double energ);
         void Sum(vector<int> energ);
 
 private:

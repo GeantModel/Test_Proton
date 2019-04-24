@@ -26,7 +26,7 @@ void RunAction::BeginOfRunAction(const G4Run *aRun) {
 void RunAction::AddEvent(G4double energy) {
     result->lower_bound(energy)->second++;
 }
-void RunAction::AddEvent2(G4int energ) {
+void RunAction::AddEvent2(G4double energ) {
     result2->lower_bound(energ)->second++;
 }
 void RunAction::EndOfRunAction(const G4Run *aRun) {

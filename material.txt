@@ -1,0 +1,69 @@
+ Material: G4_POLYSTYRENE    density:  1.060 g/cm3   RadL:  41.313 cm   Nucl.Int.Length:  68.750 cm 
+                       Imean:  68.700 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  92.26 %  ElmAbundance  50.00 % 
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction:   7.74 %  ElmAbundance  50.00 % 
+
+ Material:      YAP    density:  5.370 g/cm3   RadL:   2.758 cm   Nucl.Int.Length:  22.270 cm 
+                       Imean: 212.593 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Y (Y)   Z = 39.0   N =    89   A = 88.906 g/mole
+         --->  Isotope:   Y89   Z = 39   N =  89   A =  88.91 g/mole   abundance: 100.000 %
+          ElmMassFraction:  54.25 %  ElmAbundance  20.00 % 
+
+   --->  Element: Al (Al)   Z = 13.0   N =    27   A = 26.982 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.000 %
+          ElmMassFraction:  16.46 %  ElmAbundance  20.00 % 
+
+   --->  Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+          ElmMassFraction:  29.29 %  ElmAbundance  60.00 % 
+
+ Material:     CeBr    density:  5.100 g/cm3   RadL:   1.929 cm   Nucl.Int.Length:  31.546 cm 
+                       Imean: 398.552 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Ce (Ce)   Z = 58.0   N =   140   A = 140.115 g/mole
+         --->  Isotope: Ce136   Z = 58   N = 136   A = 135.91 g/mole   abundance:  0.185 %
+         --->  Isotope: Ce138   Z = 58   N = 138   A = 137.91 g/mole   abundance:  0.251 %
+         --->  Isotope: Ce140   Z = 58   N = 140   A = 139.91 g/mole   abundance: 88.450 %
+         --->  Isotope: Ce142   Z = 58   N = 142   A = 141.91 g/mole   abundance: 11.114 %
+          ElmMassFraction:  36.89 %  ElmAbundance  25.00 % 
+
+   --->  Element: Br (Br)   Z = 35.0   N =    80   A = 79.904 g/mole
+         --->  Isotope:  Br79   Z = 35   N =  79   A =  78.92 g/mole   abundance: 50.690 %
+         --->  Isotope:  Br81   Z = 35   N =  81   A =  80.92 g/mole   abundance: 49.310 %
+          ElmMassFraction:  63.11 %  ElmAbundance  75.00 % 
+
+ Material:     LYSO    density:  7.150 g/cm3   RadL:   1.390 cm   Nucl.Int.Length:  19.750 cm 
+                       Imean: 328.653 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Lu (Lu)   Z = 71.0   N =   175   A = 174.967 g/mole
+         --->  Isotope: Lu175   Z = 71   N = 175   A = 174.94 g/mole   abundance: 97.410 %
+         --->  Isotope: Lu176   Z = 71   N = 176   A = 175.94 g/mole   abundance:  2.590 %
+          ElmMassFraction:  47.04 %  ElmAbundance  12.50 % 
+
+   --->  Element: Y (Y)   Z = 39.0   N =    89   A = 88.906 g/mole
+         --->  Isotope:   Y89   Z = 39   N =  89   A =  88.91 g/mole   abundance: 100.000 %
+          ElmMassFraction:  23.90 %  ElmAbundance  12.50 % 
+
+   --->  Element: Si (Si)   Z = 14.0   N =    28   A = 28.085 g/mole
+         --->  Isotope:  Si28   Z = 14   N =  28   A =  27.98 g/mole   abundance: 92.230 %
+         --->  Isotope:  Si29   Z = 14   N =  29   A =  28.98 g/mole   abundance:  4.683 %
+         --->  Isotope:  Si30   Z = 14   N =  30   A =  29.97 g/mole   abundance:  3.087 %
+          ElmMassFraction:   7.55 %  ElmAbundance  12.50 % 
+
+   --->  Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+          ElmMassFraction:  21.51 %  ElmAbundance  62.50 % 
+
