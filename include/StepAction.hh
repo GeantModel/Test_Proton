@@ -13,7 +13,7 @@ class EventAction;
 class StepAction : public G4UserSteppingAction{
        G4String pName;
 private:
-    Command* detCommand;
+//    Command* detCommand;
 
 public:
     EventAction* event;

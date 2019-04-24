@@ -11,9 +11,9 @@ void Command::SetNewValue(G4UIcommand *command, G4String newValue) {
     if(command == cmd)
         exit(80);
     if(command == setSize)
-        my_command_geometry->setSize(setSize->GetNewDoubleValue(newValue));
+  //      my_command_geometry->setSize(setSize->GetNewDoubleValue(newValue));
     if(command == setMaterial)
-        my_command_geometry->setMaterial(newValue);
+//        my_command_geometry->setMaterial(newValue);
     if(command==setVector)
         my_command_gen->setVector(setVector->GetNew3VectorValue(newValue));
     if(command==setName)

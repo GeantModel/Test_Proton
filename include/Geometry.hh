@@ -1,28 +1,37 @@
-//
-// Created by student on 08.05.18.
-//
+#ifndef CPROJECT_DETGEOMETRY_HH
+#define CPROJECT_DETGEOMETRY_HH
 
-#ifndef TEMPLATE_GEOMETRY_HH
-#define TEMPLATE_GEOMETRY_HH
+#include "G4SystemOfUnits.hh"
 
-#include <G4VUserDetectorConstruction.hh>
+#include <G4PhysicalConstants.hh>
+#include "G4SolidStore.hh"
+#include "G4LogicalVolumeStore.hh"
+#include "G4PhysicalVolumeStore.hh"
+
 #include "G4NistManager.hh"
-class Command;
-class Geometry: public G4VUserDetectorConstruction{
 
+#include "G4PVPlacement.hh"
+
+#include "G4Box.hh"
+
+#include "G4VUserDetectorConstruction.hh"
+
+class G4VPhysicalVolume;
+class G4LogicalVolume;
+
+class Geometry  : public G4VUserDetectorConstruction
+{
+private:
+    G4NistManager*              nist;
+    G4Material*                 world_mat;
+    G4double                    world_sizeXYZ;
+    G4Box*                      solidWorld;
+    G4LogicalVolume*            logicWorld;
+    virtual G4VPhysicalVolume*  Construct();
+    G4VPhysicalVolume*          physWorld;
 public:
-    G4VPhysicalVolume *Construct() override;
     Geometry();
     virtual ~Geometry();
-
-private:
-    G4double box_size;
-    G4String mName;
-    G4NistManager* nist;
-    Command* detCommand;
-
-public:
-    void setSize(G4double newSize);
-    void setMaterial(G4String newBoxMaterial);
 };
-#endif //TEMPLATE_GEOMETRY_HH
+
+#endif //CPROJECT_DETGEOMETRY_HH

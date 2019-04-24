@@ -14,7 +14,7 @@ private:
 
     G4ParticleGun* gun;
     G4ThreeVector pos_vect;
-    Command * detCommand;
+//    Command * detCommand;
     G4double Energy;
     G4int number;
 public:
@@ -25,5 +25,13 @@ public:
     void GeneratePrimaries(G4Event *anEvent) override;
     void setVector(G4ThreeVector newValue);
     void setEnergy(G4double newValue);
+
+    double Counter = 0;
+    double Sum = 0;
+    double t2 =0;
+    double t1 =0;
+    double dt = 0;
+    double PCounts = 1000;
+    double Step = 1000;
 };
 #endif //TEMPLATE_PRIMARYGEN_HH

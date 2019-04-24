@@ -10,17 +10,21 @@
 
 
 StepAction::StepAction(EventAction *event) : event(event) {
-    detCommand = new Command(this);
+//    detCommand = new Command(this);
 }
 
 
 void StepAction::UserSteppingAction(const G4Step *step) {
     int num = 0;
-//    if (step->GetPostStepPoint()->GetPhysicalVolume() != nullptr)
+   if (step->GetPostStepPoint()->GetPhysicalVolume() != nullptr)
         if (//step->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "world_pvp"
-            step->GetTrack()->GetVolume()->GetName() == "box_bgo_pvp"
-            && step->GetTotalEnergyDeposit() > 0)
-         event->AddEnDep(step->GetTotalEnergyDeposit());
+            step->GetTrack()->GetVolume()->GetLogicalVolume()->GetName() == "scin_CH_log"
+            && step->GetTrack()->GetParticleDefinition()->GetParticleName() == "proton"
+            && step->GetTrack()->GetCurrentStepNumber() == 1
+           // && step->GetTotalEnergyDeposit() > 0
+           )
+        // event->AddEnDep(step->GetTotalEnergyDeposit());
+            event->AddEnDep(step->GetTrack()->GetKineticEnergy());
 }
 
 void StepAction::setName(G4String newValue) {

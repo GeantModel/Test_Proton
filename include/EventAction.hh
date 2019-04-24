@@ -8,17 +8,21 @@
 #include <G4UserEventAction.hh>
 #include <pwdefs.hh>
 #include "Command.hh"
+#include "vector"
+
+using namespace std;
 
 class RunAction;
 
 class EventAction: public G4UserEventAction{
       G4double Threshold;
 private:
-    Command* detCommand;
+//    Command* detCommand;
     G4double EnergyDep;
     G4int num;
 public:
     RunAction* runAction;
+    vector<double> VecEnergy;
     explicit EventAction(RunAction *runAction);
     void setEvent(G4double newValue);
     void BeginOfEventAction(const G4Event* anEvent);
